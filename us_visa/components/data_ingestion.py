@@ -31,7 +31,8 @@ class DataIngestion:
             dir_path = os.path.dirname(feature_store_file_path)
             os.makedirs(dir_path, exist_ok=True)
             logging.info(f"Saving exported data into feature store file path: {feature_store_file_path}")
-            dataframe.to_csv(feature_store_file_path, index = False, header = True)
+            dataframe.to_csv(feature_store_file_path, index=False, header=True)
+            print(f"Data exported shape: {dataframe.shape}")
             return dataframe
 
         except Exception as e:
