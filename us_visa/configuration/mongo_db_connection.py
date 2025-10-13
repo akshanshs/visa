@@ -30,3 +30,7 @@ class MongoDBClient:
             logging.info("Mongo DB Connection successful")
         except Exception as e:
             raise USvisaException(e, sys)
+
+    def __getitem__(self, database_name: str):
+
+        return self.client[database_name]

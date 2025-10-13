@@ -208,4 +208,9 @@ __marimo__/
 
 #environment variables
 .env
+
+# data and artifacts
 artifact/*
+*.csv
+*.parquet
+*.feather
